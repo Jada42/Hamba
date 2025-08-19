@@ -1,9 +1,34 @@
 # Hybrid Attention-SSM-Hopfield Model
 
-This project explores a **novel hybrid architecture** that mixes
+# Hybrid Hopfield-SSM-Attention Language Model
+
+This random curiosity project explores a **novel hybrid architecture** that mixes
 **Transformers (self-attention)**, **State-Space Models (SSMs)**, and
 **Hopfield networks** to see how well such combinations can learn
-language modeling tasks.
+language modeling tasks. It's basically inspired by the hippocampus and uses
+associative memory for pattern completion alongside efficient state tracking.
+
+## 🧪 What Is This?
+
+A weird experiment that accidentally works really well. I wanted to see what happens when you combine:
+- **Hopfield Networks** (1982 associative memory) – Here, I also use a modern hopfield which I found out after reading the 2020 paper: **Hopfield is all you need** (nice pun on attention is all you need) – https://doi.org/10.48550/arXiv.2008.02217
+- **State Space Models** (linear complexity sequence modeling)  
+- **Self-Attention** (the transformer thing everyone uses)
+
+Turns out they work together better than separately. Who knew? 🤷
+
+## 📊 Results That Surprised Me
+
+Training on TinyShakespeare with just **4.5M parameters**:
+
+| Configuration | Loss | Perplexity | Params | vs GPT-2 (124M) |
+|--------------|------|------------|--------|-----------------|
+| Classic Hopfield + Attention | 1.98 | ~7.2 | 3.6M | - |
+| Modern Hopfield + Attention | 1.15 | ~3.2 | 4.1M | Getting close... |
+| **Full Stack (Hop+SSM+Attn)** | **0.58** | **~1.79** | **4.5M** | **Better!** |
+
+The full model achieves **better perplexity than GPT-2** while being **27x smaller**. I'm still not sure why this works so well. (steps were run until (100/step) 3000. 
+
 
 We tested the idea on **Tiny Shakespeare** dataset.
 
