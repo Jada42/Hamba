@@ -1,6 +1,4 @@
-# Hybrid Attention-SSM-Hopfield Model
-
-# Hybrid Hopfield-SSM-Attention Language Model
+# Hybrid Attention-SSM-Hopfield Model – HASS
 
 This random curiosity project explores a **novel hybrid architecture** that mixes
 **Transformers (self-attention)**, **State-Space Models (SSMs)**, and
