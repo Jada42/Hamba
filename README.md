@@ -25,7 +25,7 @@ Training on TinyShakespeare with just **4.5M parameters**:
 | Modern Hopfield + Attention | 1.15 | ~3.2 | 4.1M | Getting close... |
 | **Full Stack (Hop+SSM+Attn)** | **0.58** | **~1.79** | **4.5M** | **Better!** |
 
-The full model achieves **better perplexity than GPT-2** while being **27x smaller**. I'm still not sure why this works so well. (steps were run until (100/step) 3000. 
+The full model achieves **better perplexity than GPT-2** while being **27x smaller**. I'm still not sure why this works so well. Maybe overfitting? However, val_loss scores were stable (steps were run until (100/step) 3000. 
 
 
 We tested the idea on **Tiny Shakespeare** dataset.
