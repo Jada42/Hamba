@@ -1,4 +1,4 @@
-# Hybrid Attention-SSM-Hopfield Model – HASS
+# Hybrid Attention-SSM-Hopfield Model – ASH? HASS? Which name do you enjoy?
 
 This random curiosity project explores a **novel hybrid architecture** that mixes
 **Transformers (self-attention)**, **State-Space Models (SSMs)**, and
@@ -139,6 +139,10 @@ Training log (loss trajectory):
 -   Try **Modern Hopfield** for higher memory capacity.\
 -   Benchmark on harder datasets (WikiText, OpenWebText).\
 -   Explore **efficient incremental Hopfield updates** for scaling.
+
+
+Newest Model, was scaled to 62M Params (PPL 39 @ Word Level Wikitext-03) has Gating and Mixture of Recursion added!
+
 
 ------------------------------------------------------------------------
 
