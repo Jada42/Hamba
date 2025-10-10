@@ -39,24 +39,23 @@ The final model (~107 M params) is an 8-layer decoder-only LM built around a `Hy
 
 ```mermaid
 graph TD
-    A[Input] --> B(Token Embeddings);
-    B --> C(Positional Embedding);
-    C --> h0(h₀);
+    A[Input] --> B[Token Embeddings]
+    B --> C[Positional Embedding]
+    C --> H[h₀]
 
-    subgraph Segmented Reasoning
-        h0 --> S1(Segment 1);
-        S1 -->|stop_gradient| CTRL(Controller);
-        h0 --> S2(Segment 2);
-        CTRL -->|bias| S2;
+    subgraph Segmented_Reasoning
+        H --> S1[Segment 1]
+        S1 -->|stop_gradient| CTRL[Controller]
+        CTRL -->|bias| S2[Segment 2]
     end
 
-    S2 --> LM(LM Head);
-    LM --> O[Logits];
+    S2 --> LM[LM Head]
+    LM --> O[Logits]
 
     %% Styling
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style O fill:#ccf,stroke:#333,stroke-width:2px
-```
+    style A fill:#ffe6ff,stroke:#333,stroke-width:1.5px
+    style O fill:#e6f0ff,stroke:#333,stroke-width:1.5px
+    style Segmented_Reasoning fill:#fdfdfd,stroke:#999,stroke-width:1px
 
 
 ```text
