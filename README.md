@@ -56,7 +56,7 @@ graph TD
     style A fill:#ffe6ff,stroke:#333,stroke-width:1.5px
     style O fill:#e6f0ff,stroke:#333,stroke-width:1.5px
     style Segmented_Reasoning fill:#fdfdfd,stroke:#999,stroke-width:1px
-
+```
 
 ```text
 Input → Positional Embedding → h₀
