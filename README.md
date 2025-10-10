@@ -1,5 +1,10 @@
 # 🧠 Hopfield-SSM-Project  
 
+![Params](https://img.shields.io/badge/Params-107M-blue)
+![Dataset](https://img.shields.io/badge/Dataset-WikiText--103-green)
+![Framework](https://img.shields.io/badge/Framework-JAX%2FFlax-orange)
+![Perplexity](https://img.shields.io/badge/Val_PPL-30.3-yellow)
+
 **A Hybrid Language Model Architecture Combining State Space Models, Hopfield Networks, and Attention**  
 *Built in JAX / Flax for TPU-scale research (and it’s cheaper by hours on Colab)*  
 *(And yes, I also use Emojis 🥹)*
@@ -245,4 +250,12 @@ ProjectHippocampus/
 
 MIT License — see MIT LICENSE.
 ---
+
+
+## 🧾 Changelog
+**v1.0 – Oct 2025**
+- Initial public release (WikiText-103 word-level PPL ≈ 30.3)
+- Added probes and ablation tables
+- Added segmented reasoning diagram
+- Still need to add the code, its still one huge monolith across a few jupyter cells and .py's lol
 
