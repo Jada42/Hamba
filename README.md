@@ -33,18 +33,42 @@ Training and evaluation were performed from scratch on **WikiText-103** (and *Ti
 
 ---
 
-## 🧠 Final Architecture Deep Dive
+## Final Architectural Deep Dive (and Ascii Graph)
 
 The final model (~107 M params) is an 8-layer decoder-only LM built around a `HybridBlock` that merges three computation paths:
 
-| Flow | Description |
-|:--|:--|
-| **Input** | Token embeddings |
-| → | **Positional Embedding → h₀** |
-| ├─► | **Segment 1** |
-| │ | `stop_gradient` applied |
-| │ | **Controller → bias** |
-| └─► | **Segment 2 → LM Head → Logits** |
+```mermaid
+graph TD
+    A[Input] --> B(Token Embeddings);
+    B --> C(Positional Embedding);
+    C --> h0(h₀);
+
+    subgraph Segmented Reasoning
+        h0 --> S1(Segment 1);
+        S1 -->|stop_gradient| CTRL(Controller);
+        h0 --> S2(Segment 2);
+        CTRL -->|bias| S2;
+    end
+
+    S2 --> LM(LM Head);
+    LM --> O[Logits];
+
+    %% Styling
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style O fill:#ccf,stroke:#333,stroke-width:2px
+```
+
+
+```text
+Input → Positional Embedding → h₀
+  ├─► Segment 1 ─┐
+  │              │ (stop_gradient)
+  │      Controller → bias
+  └─► Segment 2 ─┘ → LM Head → Logits
+```
+
+
+(Ascii Art may not be the best, but if you have tipps, help! haha)
 
 ### 1️⃣ Modern SSM (`ModernSSM`)
 - Depthwise causal conv prefilter → selective scan (A diag param via log stabilization)  
