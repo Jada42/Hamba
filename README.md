@@ -38,10 +38,10 @@ Training and evaluation were performed from scratch on **WikiText-103** (and *Ti
 The final model (~107 M params) is an 8-layer decoder-only LM built around a `HybridBlock` that merges three computation paths:
 
 Input → Positional Embedding → h₀
-├─► Segment 1 ─┐
-│              │ stop_gradient
-│           Controller → bias
-└─► Segment 2 ─┘ → LM Head → Logits
+   ├─► Segment 1 ─┐
+   │              │ stop_gradient
+   │           Controller → bias
+   └─► Segment 2 ─┘ → LM Head → Logits
 
 ### 1️⃣ Modern SSM (`ModernSSM`)
 - Depthwise causal conv prefilter → selective scan (A diag param via log stabilization)  
