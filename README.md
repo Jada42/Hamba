@@ -124,21 +124,22 @@ Early byte-level experiments confirmed stable learning curves with steady CE red
 - SSM balances both, bridging sequential and content signals  
 
 *(Table 2 — Probe Results)*
-test        val_ce    category
-baseline    3.6043    baseline
-seg_1       3.8902    segments
-seg_2       3.6136    segments
-seg_3       3.6043    segments
-ctrl_normal 3.6043    controller
-ctrl_shuffle3.7270    controller
-ctrl_random 4.1094    controller
-no_ctrl     3.8902    controller
-only_ssm    9.8124    single_path
-only_hop    7.7175    single_path
-only_attn   9.1533    single_path
-ssm+hop     5.4290    two_path
-ssm+attn    9.5113    two_path
-hop+attn    7.4022    two_path
+| Test | Val CE | Category |
+|:--|--:|:--|
+| baseline | 3.6043 | baseline |
+| seg_1 | 3.8902 | segments |
+| seg_2 | 3.6136 | segments |
+| seg_3 | 3.6043 | segments |
+| ctrl_normal | 3.6043 | controller |
+| ctrl_shuffle | 3.7270 | controller |
+| ctrl_random | 4.1094 | controller |
+| no_ctrl | 3.8902 | controller |
+| only_ssm | 9.8124 | single_path |
+| only_hop | 7.7175 | single_path |
+| only_attn | 9.1533 | single_path |
+| ssm+hop | 5.4290 | two_path |
+| ssm+attn | 9.5113 | two_path |
+| hop+attn | 7.4022 | two_path |
 
 ---
 
