@@ -33,7 +33,7 @@ Training and evaluation were performed from scratch on **WikiText-103** (and *Ti
 
 ---
 
-## Final Architectural Deep Dive (and Ascii Graph)
+## Final Architectural Deep Dive (and mermaid graph)
 
 The final model (~107 M params) is an 8-layer decoder-only LM built around a `HybridBlock` that merges three computation paths:
 
@@ -57,17 +57,6 @@ graph TD
     style O fill:#e6f0ff,stroke:#333,stroke-width:1.5px
     style Segmented_Reasoning fill:#fdfdfd,stroke:#999,stroke-width:1px
 ```
-
-```text
-Input → Positional Embedding → h₀
-  ├─► Segment 1 ─┐
-  │              │ (stop_gradient)
-  │      Controller → bias
-  └─► Segment 2 ─┘ → LM Head → Logits
-```
-
-
-(Ascii Art may not be the best, but if you have tipps, help! haha)
 
 ### 1️⃣ Modern SSM (`ModernSSM`)
 - Depthwise causal conv prefilter → selective scan (A diag param via log stabilization)  
