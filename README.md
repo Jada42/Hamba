@@ -1,11 +1,11 @@
-# 🧠 Hopfield-SSM-Project  
+# 🧠 Hybrid Hopfield-SSM Language Model  
 
 ![Params](https://img.shields.io/badge/Params-107M-blue)
 ![Dataset](https://img.shields.io/badge/Dataset-WikiText--103-green)
 ![Framework](https://img.shields.io/badge/Framework-JAX%2FFlax-orange)
 ![Perplexity](https://img.shields.io/badge/Val_PPL-30.3-yellow)
 
-**A Hybrid Language Model Architecture Combining State Space Models, Hopfield Networks, and Attention**  
+**An experimental Hybrid Language Model Architecture Combining State Space Models, Hopfield Networks, and Attention**  
 *Built in JAX / Flax for TPU-scale research (and it’s cheaper by hours on Colab)*  
 *(And yes, I also use Emojis 🥹)*
 
