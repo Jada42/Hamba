@@ -1,4 +1,4 @@
-# Hamba: a hybrid hopfield-ssm LM 
+# Hamba: A Hopfield-Mamba Inspired LLM 
 
 ![Params](https://img.shields.io/badge/Params-107M-blue)
 ![Dataset](https://img.shields.io/badge/Dataset-WikiText--103-green)
