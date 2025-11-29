@@ -1,4 +1,4 @@
-# 🧠 Hybrid Hopfield-SSM Language Model  
+# Hamba: a hybrid hopfield-ssm LM 
 
 ![Params](https://img.shields.io/badge/Params-107M-blue)
 ![Dataset](https://img.shields.io/badge/Dataset-WikiText--103-green)
